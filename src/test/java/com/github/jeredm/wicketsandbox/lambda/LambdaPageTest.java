@@ -14,7 +14,6 @@ import com.github.jeredm.wicketsandbox.WicketApplication;
  */
 public class LambdaPageTest
 {
-
 	private WicketTester tester;
 
 	@Before

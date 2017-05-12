@@ -28,7 +28,7 @@ public class LambdaPageTest
 		tester.startPage(LambdaPage.class);
 		tester.assertRenderedPage(LambdaPage.class);
 	}
-	
+
 	@Test
 	public void lambdaFirstNameRenders()
 	{
@@ -41,5 +41,19 @@ public class LambdaPageTest
 	{
 		tester.startPage(LambdaPage.class);
 		tester.assertLabel("lastNmMethodRef", "Smith");
+	}
+
+	@Test
+	public void lambdaModelFullNameRenders()
+	{
+		tester.startPage(LambdaPage.class);
+		tester.assertLabel("fullNmLambda", "Joe Smith");
+	}
+
+	@Test
+	public void lambdaNestedFirstNameRenders()
+	{
+		tester.startPage(LambdaPage.class);
+		tester.assertLabel("lastNmMap", "Joe");
 	}
 }

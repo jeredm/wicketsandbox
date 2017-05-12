@@ -45,5 +45,15 @@ public class Person
 		this.lastNm = lastNm;
 	}
 
-
+	/**
+	 * @return the full name
+	 */
+	public String getFullNm()
+	{
+		StringBuilder sb = new StringBuilder(10);
+		sb.append(this.firstNm);
+		sb.append(" ");
+		sb.append(this.lastNm);
+		return sb.toString();
+	}
 }

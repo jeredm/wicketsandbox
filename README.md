@@ -1,4 +1,4 @@
-# Wicket Sandbox
+# Wicket Sandbox [![Build Status](https://travis-ci.org/jeredm/wicketsandbox.svg?branch=master)](https://travis-ci.org/jeredm/wicketsandbox)
 This is an [Apache Wicket Quickstart](https://wicket.apache.org/start/quickstart.html) based on the soon to be released Wicket 8!
 It is currently using the SNAPSHOT of Wicket 8.
 

@@ -58,5 +58,9 @@ public class OptionalPageTest
 		tester.assertLabel("counterResults", "0");
 		tester.clickLink("increment");
 		tester.assertLabel("counterResults", "1");
+		
+		// No AJAX
+		tester.clickLink("increment", false);
+		tester.assertLabel("counterResults", "2");
 	}
 }

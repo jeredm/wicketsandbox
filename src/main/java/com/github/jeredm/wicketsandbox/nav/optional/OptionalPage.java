@@ -36,6 +36,7 @@ public class OptionalPage extends BasePage
 				return String.valueOf(counter);
 			}
 		});
+		counterResults.setOutputMarkupId(true);
 		add(counterResults);
 		
 		add(new AjaxFallbackLink<Void>("increment") {
@@ -46,7 +47,7 @@ public class OptionalPage extends BasePage
 			public void onClick(Optional<AjaxRequestTarget> target)
 			{
 				counter ++;
-				target.ifPresent(t -> t.add(OptionalPage.this));
+				target.ifPresent(t -> t.add(counterResults));
 			}
 			
 		});

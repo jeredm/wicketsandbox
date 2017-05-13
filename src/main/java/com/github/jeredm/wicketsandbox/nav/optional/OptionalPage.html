@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:wicket="http://wicket.apache.org">
-	<head>
+<head>
 		<meta charset="utf-8" />
-		<title>Apache Wicket Sandbox</title>
+		<title>Optional Example</title>
 		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
 		<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet" />
 	</head>
@@ -10,17 +10,17 @@
 		<div id="hd">
 			<div id="logo">
 				<img src="logo.png" width="50px" height="50px" alt="Wicket Logo" />
-				<h1>Apache Wicket Sandbox</h1>
+				<h1>Optional Example</h1>
 			</div>
 		</div>
 		<div id="bd">
-			<p>
-				This is a sandbox to play around with Wicket 8 features.<br />
-				<a href="https://ci.apache.org/projects/wicket/guide/8.x/single.html">Need help? Here is an awesome guide!</a>
-			</p>
+			<div class="pb">
+				<label>Click Counter: </label> <span wicket:id="counterResults">[0]</span>
+			</div>
 			<div>
-				<label>Lambda:</label> <a wicket:id="lambdaLink">Examples using Lambda Models</a>
-			</div> 	
+				<label>This AjaxFallbackLink handles a missing AjaxTarget: </label> <a wicket:id="increment">Click Here</a>
+			</div>
+			<div class="back-link"><a href="../">Go Back Home</a></div>
 		</div>
 		<div id="ft">
 		</div>

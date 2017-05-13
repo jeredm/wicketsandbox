@@ -1,11 +1,14 @@
-package com.github.jeredm.wicketsandbox;
+package com.github.jeredm.wicketsandbox.nav;
 
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.util.tester.WicketTester;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.github.jeredm.wicketsandbox.lambda.LambdaPage;
+import com.github.jeredm.wicketsandbox.WicketApplication;
+import com.github.jeredm.wicketsandbox.nav.lambda.LambdaPage;
+import com.github.jeredm.wicketsandbox.nav.optional.OptionalPage;
 
 /**
  * Tests for the home page
@@ -21,6 +24,12 @@ public class HomePageTest
 	public void setUp()
 	{
 		tester = new WicketTester(new WicketApplication());
+	}
+	
+	@After
+	public void tearDown()
+	{
+		tester.destroy();
 	}
 
 	@Test
@@ -43,5 +52,20 @@ public class HomePageTest
 		tester.startPage(HomePage.class);
 		tester.clickLink("lambdaLink");
 		tester.assertRenderedPage(LambdaPage.class);
+	}
+	
+	@Test
+	public void optionalLinkRenders()
+	{
+		tester.startPage(HomePage.class);
+		tester.assertComponent("optionalLink", BookmarkablePageLink.class);
+	}
+
+	@Test
+	public void optionalLinkRedirects()
+	{
+		tester.startPage(HomePage.class);
+		tester.clickLink("optionalLink");
+		tester.assertRenderedPage(OptionalPage.class);
 	}
 }

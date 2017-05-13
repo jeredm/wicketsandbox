@@ -1,4 +1,4 @@
-package com.github.jeredm.wicketsandbox.lambda;
+package com.github.jeredm.wicketsandbox.nav.lambda;
 
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.model.IModel;

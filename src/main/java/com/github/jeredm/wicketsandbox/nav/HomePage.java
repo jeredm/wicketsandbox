@@ -1,9 +1,10 @@
-package com.github.jeredm.wicketsandbox;
+package com.github.jeredm.wicketsandbox.nav;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 
-import com.github.jeredm.wicketsandbox.lambda.LambdaPage;
+import com.github.jeredm.wicketsandbox.nav.lambda.LambdaPage;
+import com.github.jeredm.wicketsandbox.nav.optional.OptionalPage;
 
 /**
  * The main page for the application.
@@ -21,5 +22,6 @@ public class HomePage extends WebPage
 	{
 		super.onInitialize();
 		add(new BookmarkablePageLink<Void>("lambdaLink", LambdaPage.class));
+		add(new BookmarkablePageLink<Void>("optionalLink", OptionalPage.class));
 	}
 }

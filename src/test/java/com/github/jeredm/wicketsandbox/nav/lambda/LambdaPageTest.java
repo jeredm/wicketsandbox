@@ -1,10 +1,12 @@
-package com.github.jeredm.wicketsandbox.lambda;
+package com.github.jeredm.wicketsandbox.nav.lambda;
 
 import org.apache.wicket.util.tester.WicketTester;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import com.github.jeredm.wicketsandbox.WicketApplication;
+import com.github.jeredm.wicketsandbox.nav.lambda.LambdaPage;
 
 /**
  * Tests the Lambda Page
@@ -20,6 +22,12 @@ public class LambdaPageTest
 	public void setUp()
 	{
 		tester = new WicketTester(new WicketApplication());
+	}
+	
+	@After
+	public void tearDown()
+	{
+		tester.destroy();
 	}
 
 	@Test

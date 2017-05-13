@@ -6,7 +6,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.github.jeredm.wicketsandbox.WicketApplication;
-import com.github.jeredm.wicketsandbox.nav.lambda.LambdaPage;
 
 /**
  * Tests the Lambda Page

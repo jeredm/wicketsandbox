@@ -7,7 +7,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.github.jeredm.wicketsandbox.WicketApplication;
-import com.github.jeredm.wicketsandbox.nav.optional.OptionalPage;
 
 /**
  * Tests the Optional page examples

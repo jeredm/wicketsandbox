@@ -51,9 +51,14 @@ public class Person
 	public String getFullNm()
 	{
 		StringBuilder sb = new StringBuilder(10);
-		sb.append(this.firstNm);
-		sb.append(" ");
-		sb.append(this.lastNm);
+		if (firstNm != null)
+			sb.append(firstNm);
+		if (sb.length() != 0 && lastNm != null)
+			sb.append(" ");
+		if (lastNm != null)
+			sb.append(lastNm);
+		if (sb.length() == 0)
+			return null;
 		return sb.toString();
 	}
 }

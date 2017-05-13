@@ -33,7 +33,13 @@ public class User
 	 */
 	public Person getPerson()
 	{
-		return person;
+		if (person == null)
+			return null;
+		
+		Person defCopy = new Person();
+		defCopy.setFirstNm(person.getFirstNm());
+		defCopy.setLastNm(person.getLastNm());
+		return defCopy;
 	}
 
 	/**
@@ -42,6 +48,9 @@ public class User
 	 */
 	public void setPerson(Person person)
 	{
-		this.person = person;
+		Person defCopy = new Person();
+		defCopy.setFirstNm(person.getFirstNm());
+		defCopy.setLastNm(person.getLastNm());
+		this.person = defCopy;
 	}
 }
